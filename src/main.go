@@ -14,7 +14,7 @@ import (
 )
 
 func main() {
-	//checkEnvs()
+	checkEnvs()
 
 	// Kafka Presentation
 	if htenvier.EnvOrDefault("CONSUME_FROM_KAFKA", "true") == "true" {

@@ -10,20 +10,11 @@ type CoinsDto struct {
 	Symbol                string `json:"symbol"`
 	Name                  string `json:"name"`
 	NameLocale            string `json:"name_locale"`
-	CoinType              string `json:"coin_type"`
 	NeedKyc               bool   `json:"need_kyc"`
-	IsCoin                bool   `json:"is_coin"`
-	IsFiat                bool   `json:"is_fiat"`
 	IsActive              bool   `json:"is_active"`
 	IsSuspended           bool   `json:"is_suspended"`
-	IsPopular             bool   `json:"is_popular"`
-	IsNew                 bool   `json:"is_new"`
-	CanSell               bool   `json:"can_sell"`
-	CanBuy                bool   `json:"can_buy"`
-	CanTrade              bool   `json:"can_trade"`
 	CanDeposit            bool   `json:"can_deposit"`
 	CanWithdraw           bool   `json:"can_withdraw"`
-	CanStake              bool   `json:"can_stake"`
 	Position              int    `json:"position"`
 	Website               string `json:"website"`
 	SuspensionDescription string `json:"suspension_description"`
