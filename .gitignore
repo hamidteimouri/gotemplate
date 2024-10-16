@@ -1,0 +1,12 @@
+# General
+src/.env
+#*.sh
+*.exe
+*.DS_Store
+
+
+# Editors
+/.idea
+/.vscode
+
+*.mod filter=goreplace
