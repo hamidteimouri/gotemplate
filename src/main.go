@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/hamidteimouri/gommon"
 	"github.com/hamidteimouri/gommon/htenvier"
 	"github.com/sirupsen/logrus"
 	"gitlab.com/hamidteimouri/core-lens/di"
@@ -8,9 +9,6 @@ import (
 	"gitlab.com/hamidteimouri/core-lens/presentation/httppr"
 	"gitlab.com/hamidteimouri/core-lens/presentation/kafkapr"
 	"golang.org/x/net/context"
-	"os"
-	"os/signal"
-	"syscall"
 )
 
 func main() {
@@ -26,10 +24,9 @@ func main() {
 
 	httppr.Start()
 
-	//wait for ctrl+c to exit
-	ch := make(chan os.Signal, 1)
-	signal.Notify(ch, syscall.SIGHUP, syscall.SIGTERM, syscall.SIGKILL)
-	<-ch
+	// wait for ctrl+c to exit
+	gommon.WaitForExit()
+
 }
 
 func checkEnvs() {
